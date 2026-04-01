@@ -20,64 +20,89 @@
     <div class="order-builder">
       <h1>Build Your Order</h1>
 
+      <!-- Step 1: Category -->
       <div class="builder-card">
-        <h2>1. Pick a Size</h2>
-        <div class="size-options" id="sizeOptions">
-          <button class="size-btn" data-size="small" data-price="4.00">
-            <span class="size-icon">S</span>
-            <span class="size-label">Small</span>
-            <span class="size-price">$4</span>
-          </button>
-          <button class="size-btn" data-size="medium" data-price="6.00">
-            <span class="size-icon">M</span>
-            <span class="size-label">Medium</span>
-            <span class="size-price">$6</span>
-          </button>
-          <button class="size-btn" data-size="large" data-price="8.00">
-            <span class="size-icon">L</span>
-            <span class="size-label">Large</span>
-            <span class="size-price">$8</span>
-          </button>
-          <button class="size-btn" data-size="quart" data-price="12.00">
-            <span class="size-icon">Q</span>
-            <span class="size-label">Quart</span>
-            <span class="size-price">$12</span>
-          </button>
+        <h2>1. Choose a Treat</h2>
+
+        <div class="category-group">
+          <h3 class="category-label">Dairy Free Treats</h3>
+          <div class="category-options">
+            <button class="cat-btn" data-category="water-ice">
+              <span class="cat-emoji">🍧</span>
+              <span class="cat-name">Polish Water Ice</span>
+              <span class="cat-desc">Smoother & creamier than regular water ice</span>
+            </button>
+            <button class="cat-btn" data-category="slushie">
+              <span class="cat-emoji">🥤</span>
+              <span class="cat-name">Slushie</span>
+              <span class="cat-desc">Frozen blended drink</span>
+            </button>
+            <button class="cat-btn" data-category="ice-cap">
+              <span class="cat-emoji">🧊</span>
+              <span class="cat-name">Ice Cap</span>
+              <span class="cat-desc">Water ice mixed with soda of your choice</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="category-group">
+          <h3 class="category-label">Dairy Treats</h3>
+          <div class="category-options">
+            <button class="cat-btn" data-category="polish-freeze">
+              <span class="cat-emoji">🍨</span>
+              <span class="cat-name">Polish Freeze</span>
+              <span class="cat-desc">Water ice flavor mixed with ice cream</span>
+            </button>
+            <button class="cat-btn" data-category="ice-cream-cup">
+              <span class="cat-emoji">🍦</span>
+              <span class="cat-name">Ice Cream Cup</span>
+              <span class="cat-desc">Chocolate, Vanilla, or mix</span>
+            </button>
+            <button class="cat-btn" data-category="ice-cream-cone">
+              <span class="cat-emoji">🍦</span>
+              <span class="cat-name">Ice Cream Cone</span>
+              <span class="cat-desc">Regular or waffle cone</span>
+            </button>
+            <button class="cat-btn" data-category="chiller">
+              <span class="cat-emoji">🥤</span>
+              <span class="cat-name">Chiller</span>
+              <span class="cat-desc">Ice cream blended with candy of your choice</span>
+            </button>
+            <button class="cat-btn" data-category="milkshake">
+              <span class="cat-emoji">🥛</span>
+              <span class="cat-name">Milkshake</span>
+              <span class="cat-desc">Classic milkshake</span>
+            </button>
+            <button class="cat-btn" data-category="float">
+              <span class="cat-emoji">🍺</span>
+              <span class="cat-name">Float</span>
+              <span class="cat-desc">Root Beer, Pepsi & more</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="builder-card">
-        <h2>2. Choose a Flavor</h2>
-        <div class="flavor-options" id="flavorOptions">
-          <button class="flavor-btn" data-flavor="Strawberry" style="--accent:#ff6b6b;">🍓 Strawberry</button>
-          <button class="flavor-btn" data-flavor="Lemon" style="--accent:#ffd43b;">🍋 Lemon</button>
-          <button class="flavor-btn" data-flavor="Blue Raspberry" style="--accent:#339af0;">🫐 Blue Raspberry</button>
-          <button class="flavor-btn" data-flavor="Mango" style="--accent:#ff922b;">🥭 Mango</button>
-          <button class="flavor-btn" data-flavor="Cherry" style="--accent:#e64980;">🍒 Cherry</button>
-          <button class="flavor-btn" data-flavor="Watermelon" style="--accent:#20c997;">🍉 Watermelon</button>
-          <button class="flavor-btn" data-flavor="Grape" style="--accent:#9775fa;">🍇 Grape</button>
-          <button class="flavor-btn" data-flavor="Pineapple" style="--accent:#fcc419;">🍍 Pineapple</button>
-          <button class="flavor-btn" data-flavor="Coconut" style="--accent:#e9ecef;">🥥 Coconut</button>
-          <button class="flavor-btn" data-flavor="Root Beer" style="--accent:#a0522d;">🍺 Root Beer</button>
-          <button class="flavor-btn" data-flavor="Cotton Candy" style="--accent:#da77f2;">🍭 Cotton Candy</button>
-          <button class="flavor-btn" data-flavor="Chocolate" style="--accent:#8B4513;">🍫 Chocolate</button>
-        </div>
+      <!-- Step 2: Size (dynamic) -->
+      <div class="builder-card" id="sizeCard" style="display:none;">
+        <h2>2. Pick a Size</h2>
+        <div class="size-options" id="sizeOptions"></div>
       </div>
 
-      <div class="builder-card">
-        <h2>3. Add Toppings <span class="optional-tag">optional</span></h2>
-        <div class="topping-options" id="toppingOptions">
-          <button class="topping-btn" data-topping="Whipped Cream" data-price="1.00">Whipped Cream +$1</button>
-          <button class="topping-btn" data-topping="Gummy Bears" data-price="1.50">Gummy Bears +$1.50</button>
-          <button class="topping-btn" data-topping="Sprinkles" data-price="0.75">Sprinkles +$0.75</button>
-          <button class="topping-btn" data-topping="Marshmallows" data-price="1.00">Marshmallows +$1</button>
-          <button class="topping-btn" data-topping="Chocolate Syrup" data-price="1.00">Chocolate Syrup +$1</button>
-          <button class="topping-btn" data-topping="Sour Worms" data-price="1.50">Sour Worms +$1.50</button>
-        </div>
+      <!-- Step 3: Cone type (ice cream cone only) -->
+      <div class="builder-card" id="coneCard" style="display:none;">
+        <h2>2. Cone Type</h2>
+        <div class="size-options" id="coneOptions"></div>
       </div>
 
-      <div class="builder-card">
-        <h2>4. Quantity</h2>
+      <!-- Step 4: Add-ons -->
+      <div class="builder-card" id="addonsCard" style="display:none;">
+        <h2 id="addonsTitle">3. Add-ons</h2>
+        <div class="topping-options" id="addonOptions"></div>
+      </div>
+
+      <!-- Step 5: Quantity -->
+      <div class="builder-card" id="qtyCard" style="display:none;">
+        <h2 id="qtyTitle">3. Quantity</h2>
         <div class="qty-control">
           <button class="qty-btn" id="qtyMinus">-</button>
           <span class="qty-value" id="qtyValue">1</span>
@@ -99,7 +124,7 @@
           <span id="subtotal">$0.00</span>
         </div>
         <div class="total-row">
-          <span>Tax (6.625%)</span>
+          <span>Tax (8.625%)</span>
           <span id="tax">$0.00</span>
         </div>
         <div class="total-row total-final">
