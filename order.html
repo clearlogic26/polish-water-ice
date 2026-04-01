@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Calculator | Polish Water Ice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+  <nav class="order-nav">
+    <a href="index.html" class="logo">Polish Water Ice</a>
+    <span class="nav-title">Order Calculator</span>
+  </nav>
+
+  <main class="order-app">
+    <div class="order-builder">
+      <h1>Build Your Order</h1>
+
+      <div class="builder-card">
+        <h2>1. Pick a Size</h2>
+        <div class="size-options" id="sizeOptions">
+          <button class="size-btn" data-size="small" data-price="4.00">
+            <span class="size-icon">S</span>
+            <span class="size-label">Small</span>
+            <span class="size-price">$4</span>
+          </button>
+          <button class="size-btn" data-size="medium" data-price="6.00">
+            <span class="size-icon">M</span>
+            <span class="size-label">Medium</span>
+            <span class="size-price">$6</span>
+          </button>
+          <button class="size-btn" data-size="large" data-price="8.00">
+            <span class="size-icon">L</span>
+            <span class="size-label">Large</span>
+            <span class="size-price">$8</span>
+          </button>
+          <button class="size-btn" data-size="quart" data-price="12.00">
+            <span class="size-icon">Q</span>
+            <span class="size-label">Quart</span>
+            <span class="size-price">$12</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="builder-card">
+        <h2>2. Choose a Flavor</h2>
+        <div class="flavor-options" id="flavorOptions">
+          <button class="flavor-btn" data-flavor="Strawberry" style="--accent:#ff6b6b;">🍓 Strawberry</button>
+          <button class="flavor-btn" data-flavor="Lemon" style="--accent:#ffd43b;">🍋 Lemon</button>
+          <button class="flavor-btn" data-flavor="Blue Raspberry" style="--accent:#339af0;">🫐 Blue Raspberry</button>
+          <button class="flavor-btn" data-flavor="Mango" style="--accent:#ff922b;">🥭 Mango</button>
+          <button class="flavor-btn" data-flavor="Cherry" style="--accent:#e64980;">🍒 Cherry</button>
+          <button class="flavor-btn" data-flavor="Watermelon" style="--accent:#20c997;">🍉 Watermelon</button>
+          <button class="flavor-btn" data-flavor="Grape" style="--accent:#9775fa;">🍇 Grape</button>
+          <button class="flavor-btn" data-flavor="Pineapple" style="--accent:#fcc419;">🍍 Pineapple</button>
+          <button class="flavor-btn" data-flavor="Coconut" style="--accent:#e9ecef;">🥥 Coconut</button>
+          <button class="flavor-btn" data-flavor="Root Beer" style="--accent:#a0522d;">🍺 Root Beer</button>
+          <button class="flavor-btn" data-flavor="Cotton Candy" style="--accent:#da77f2;">🍭 Cotton Candy</button>
+          <button class="flavor-btn" data-flavor="Chocolate" style="--accent:#8B4513;">🍫 Chocolate</button>
+        </div>
+      </div>
+
+      <div class="builder-card">
+        <h2>3. Add Toppings <span class="optional-tag">optional</span></h2>
+        <div class="topping-options" id="toppingOptions">
+          <button class="topping-btn" data-topping="Whipped Cream" data-price="1.00">Whipped Cream +$1</button>
+          <button class="topping-btn" data-topping="Gummy Bears" data-price="1.50">Gummy Bears +$1.50</button>
+          <button class="topping-btn" data-topping="Sprinkles" data-price="0.75">Sprinkles +$0.75</button>
+          <button class="topping-btn" data-topping="Marshmallows" data-price="1.00">Marshmallows +$1</button>
+          <button class="topping-btn" data-topping="Chocolate Syrup" data-price="1.00">Chocolate Syrup +$1</button>
+          <button class="topping-btn" data-topping="Sour Worms" data-price="1.50">Sour Worms +$1.50</button>
+        </div>
+      </div>
+
+      <div class="builder-card">
+        <h2>4. Quantity</h2>
+        <div class="qty-control">
+          <button class="qty-btn" id="qtyMinus">-</button>
+          <span class="qty-value" id="qtyValue">1</span>
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+      </div>
+
+      <button class="add-to-order-btn" id="addToOrder" disabled>Add to Order</button>
+    </div>
+
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="order-items" id="orderItems">
+        <p class="empty-order">No items yet. Build something delicious!</p>
+      </div>
+      <div class="order-totals" id="orderTotals" style="display:none;">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="subtotal">$0.00</span>
+        </div>
+        <div class="total-row">
+          <span>Tax (6.625%)</span>
+          <span id="tax">$0.00</span>
+        </div>
+        <div class="total-row total-final">
+          <span>Total</span>
+          <span id="total">$0.00</span>
+        </div>
+      </div>
+      <button class="clear-order-btn" id="clearOrder" style="display:none;">Clear Order</button>
+    </div>
+  </main>
+
+  <script src="order.js"></script>
+</body>
+</html>

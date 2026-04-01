@@ -1,0 +1,383 @@
+/* Order Nav */
+.order-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
+.order-nav .logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.nav-title {
+  font-weight: 600;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Layout */
+.order-app {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  align-items: start;
+}
+
+.order-builder h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1e1e2e;
+}
+
+/* Builder Cards */
+.builder-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.builder-card h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #1e1e2e;
+}
+
+.optional-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #e9ecef;
+  color: #868e96;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  vertical-align: middle;
+}
+
+/* Size Buttons */
+.size-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.size-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1rem 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.size-btn:hover {
+  border-color: #c5c6f7;
+  background: #f8f8ff;
+}
+
+.size-btn.active {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.size-icon {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  color: #6366f1;
+}
+
+.size-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.size-price {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Flavor Buttons */
+.flavor-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.flavor-btn {
+  padding: 0.7rem 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.flavor-btn:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, white);
+}
+
+.flavor-btn.active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, white);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* Topping Buttons */
+.topping-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.topping-btn {
+  padding: 0.65rem 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.topping-btn:hover {
+  border-color: #c5c6f7;
+  background: #f8f8ff;
+}
+
+.topping-btn.active {
+  border-color: #6366f1;
+  background: #eef2ff;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+/* Quantity */
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.qty-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #e9ecef;
+  background: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: #6366f1;
+  font-family: 'Inter', sans-serif;
+}
+
+.qty-btn:hover {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.qty-value {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.8rem;
+  min-width: 2.5rem;
+  text-align: center;
+  color: #1e1e2e;
+}
+
+/* Add to Order */
+.add-to-order-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.add-to-order-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.add-to-order-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Order Summary */
+.order-summary {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 2rem;
+}
+
+.order-summary h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #1e1e2e;
+}
+
+.empty-order {
+  text-align: center;
+  color: #aaa;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+/* Order Items */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1e1e2e;
+}
+
+.item-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #1e1e2e;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.item-remove {
+  background: none;
+  border: none;
+  color: #e03131;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.item-remove:hover {
+  background: #fff5f5;
+}
+
+/* Totals */
+.order-totals {
+  border-top: 2px solid #f1f3f5;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.total-final {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #1e1e2e;
+  padding-top: 0.6rem;
+  border-top: 2px solid #e9ecef;
+  margin-top: 0.4rem;
+}
+
+.clear-order-btn {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  background: #fff;
+  color: #e03131;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.clear-order-btn:hover {
+  border-color: #e03131;
+  background: #fff5f5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-app {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    position: static;
+  }
+
+  .size-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flavor-options,
+  .topping-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
